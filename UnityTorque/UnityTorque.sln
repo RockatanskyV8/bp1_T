@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{5CDFE75C-30AF-8227-40E5-BF4E40064395}") = "UnityTorque", "Assembly-CSharp.csproj", "{564FFE05-9A06-DF0F-342C-30AFD6752C86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564FFE05-9A06-DF0F-342C-30AFD6752C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564FFE05-9A06-DF0F-342C-30AFD6752C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564FFE05-9A06-DF0F-342C-30AFD6752C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564FFE05-9A06-DF0F-342C-30AFD6752C86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

@@ -9,12 +9,13 @@ public class InitialKick1 : MonoBehaviour {
 	Vector3 iT 	= new Vector3(1f, 0f, 0f);
 
 	private Rigidbody rb;
-	public float torqueTime;
+	//public float torqueTime;
 
 	Vector3 T;
 
 // Use this for initialization
-	void OnEnable () {
+	void OnEnable () 
+	{
 		rb = GetComponent<Rigidbody> ();
 		Vector3 x = Vector3.Cross(Ti.normalized, iT.normalized);
 		float theta = Mathf.Asin(x.magnitude);
@@ -23,5 +24,23 @@ public class InitialKick1 : MonoBehaviour {
 		Quaternion q = transform.rotation * rb.inertiaTensorRotation;
 		T = q * Vector3.Scale(rb.inertiaTensor, (Quaternion.Inverse(q) * w));
 		rb.angularVelocity = T;
+
+//		Ve = T.magnitude;
+	}
+
+/*	void FixedUpdate()
+	{
+		StopR ();
+	}*/
+
+	void StopR()
+	{
+		float SlowDownPerSecond = 2f;
+		if(rb.angularVelocity.magnitude > SlowDownPerSecond * Time.deltaTime){
+			rb.AddTorque(-rb.angularVelocity.normalized * SlowDownPerSecond, ForceMode.Force);
+		}
+		/*else {
+			rb.angularVelocity = Vector3.zero;
+		}*/
 	}
 }

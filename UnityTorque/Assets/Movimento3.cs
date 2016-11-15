@@ -16,12 +16,11 @@ public class Movimento3 : MonoBehaviour {
 		rigidBody = GetComponent <Rigidbody> ();
 		__localI = Matrix4x4.Scale (rigidBody.inertiaTensor);
 		_globalL = rigidBody.angularVelocity;
-
-		//Debug.Log (__localI * _globalL);
 	}
 
 	void FixedUpdate() {
 		CalculateRotation ();
+		Debug.Log (rigidBody.angularVelocity);
 	}
 
 	void CalculateRotation ()
@@ -38,8 +37,12 @@ public class Movimento3 : MonoBehaviour {
 		Vector3 _globalRotationAxis = 	_globalW.normalized;
 		float speed = 					_globalW.magnitude;
 
-		float degreesThisFrame = (speed * Time.deltaTime) / 0.08f;
-		Debug.Log (_globalL.magnitude);
-		transform.RotateAround (transform.position, _globalRotationAxis, degreesThisFrame);
+		float degreesThisFrame =(speed * Time.deltaTime * Mathf.Rad2Deg) - Time.time;
+		if(degreesThisFrame >= 0)
+		{
+			transform.RotateAround (transform.position, _globalRotationAxis, degreesThisFrame);
+		}
+
 	}
+
 }

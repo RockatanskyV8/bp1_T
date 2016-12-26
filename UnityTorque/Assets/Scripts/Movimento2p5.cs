@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class Movimento2 : MonoBehaviour {
+using System.Collections.Generic;
+public class Movimento2p5 : MonoBehaviour {
 	public Rigidbody rb;
 	void Start(){
 		rb = GetComponent <Rigidbody> ();
@@ -14,24 +14,22 @@ public class Movimento2 : MonoBehaviour {
 	{
 		if (Input.GetAxis("Vertical") > 0)
 		{
-			rb.AddForce(Vector3.forward * 10);
+			rb.AddForce(-Vector3.forward * 10);
 		}
 
 		if (Input.GetAxis("Vertical") < 0)
 		{
-			rb.AddForce(-Vector3.forward * 10);
+			rb.AddForce(Vector3.forward * 10);
 		}
 
 		if (Input.GetAxis("Horizontal") > 0)
 		{
-			rb.AddForce(Vector3.right * 10);
+			rb.AddForce(-Vector3.right * 10);
 		}
 
 		if (Input.GetAxis("Horizontal") < 0)
 		{
-			rb.AddForce(-Vector3.right * 10);
+			rb.AddForce(Vector3.right * 10);
 		}
 	}
 }
-
-//63.41365

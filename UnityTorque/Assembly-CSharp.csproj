@@ -45,13 +45,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ForcaScript.cs" />
-     <Compile Include="Assets\InitialKick1.cs" />
-     <Compile Include="Assets\Movimento2.cs" />
-     <Compile Include="Assets\Movimento3.cs" />
-     <Compile Include="Assets\ObjectPhysics.cs" />
-     <Compile Include="Assets\SpinRite.cs" />
-     <Compile Include="Assets\initialKick.cs" />
+     <Compile Include="Assets\Scripts\AngleTest.cs" />
+     <Compile Include="Assets\Scripts\Colider.cs" />
+     <Compile Include="Assets\Scripts\Direcao.cs" />
+     <Compile Include="Assets\Scripts\DrawForces.cs" />
+     <Compile Include="Assets\Scripts\ForcaScript.cs" />
+     <Compile Include="Assets\Scripts\InitialKick1.cs" />
+     <Compile Include="Assets\Scripts\Movimento2.cs" />
+     <Compile Include="Assets\Scripts\Movimento2p5.cs" />
+     <Compile Include="Assets\Scripts\Movimento3.cs" />
+     <Compile Include="Assets\Scripts\ObjectPhysics.cs" />
+     <Compile Include="Assets\Scripts\PhysicsEngine.cs" />
+     <Compile Include="Assets\Scripts\SpinRite.cs" />
+     <Compile Include="Assets\Scripts\initialKick.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
